@@ -16,7 +16,7 @@ public class PortailDeCinema {
         
         System.out.println("Résultats de la recherche : ");
 
-        kjjgkjvb
+    
         
     }
     
