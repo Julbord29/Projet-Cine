@@ -12,7 +12,7 @@ public class PortailDeCinema {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Film (1) ou Cinema (2)?");
+        System.out.println("Film (1) ou Salle de Cinema (2)?");
         int Recherche = sc.nextInt();
         
         if (Recherche == 1){
