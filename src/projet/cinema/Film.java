@@ -1,5 +1,7 @@
 package projet.cinema;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,9 @@ public class Film {
     private String résumé;
     private float notepresse;
     private Etablissement salle;
+    private final String Nom_Fichier_Utilisateur = "Utilisateurs.txt";
+    private final String Nom_Fichier_Film = "Films.txt";
+    private final String Nom_Fichier_Etablissement = "Calendriers.txt";
 
     public Film(int duree, String identifiant, String titre, String genre, LocalDate datesortie, ArrayList<String> casting, String résumé, float notepresse, Etablissement salle) {
         this.duree = duree;
@@ -22,11 +27,18 @@ public class Film {
         this.genre = genre;
         this.datesortie = datesortie;
         this.casting = casting;
-        this.résumé = résumé;
+        this.resume = resume;
         this.notepresse = notepresse;
         this.salle = salle;
     }
+    
+
         
+    public Portail(String nom){
+        portail = nom;
+        
+    }
+    
     public String getTitre() {
         return titre;
     }
@@ -51,7 +63,15 @@ public class Film {
         }
         return result;
     }
-    
+   
+   public void versFichierUtilisateur() throws IOException {
+        FileWriter fich = new FileWriter(Nom_Fichier_Utilisateur);
+        for (int i = 0;(i < ListeUtilisateurs.length)&&(ListeUtilisateurs[i] != null); i++) {
+            String chaine = ListeUtilisateurs[i].versFichier();
+            fich.write(chaine);
+        }
+        fich.close();
+    }
     
     
 }
