@@ -9,7 +9,7 @@ import java.util.List;
 public class Film {
     private int duree;
     private String identifiant;
-    private String titre;
+    private static String titre;
     private String genre;
     private LocalDate datesortie;
     private ArrayList<String> casting;
@@ -39,7 +39,7 @@ public class Film {
         
     }
     
-    public String getTitre() {
+    public static String getTitre() {
         return titre;
     }
 
@@ -73,5 +73,12 @@ public class Film {
         fich.close();
     }
     
-    
+    public Film chercherFilmParNom(List<Film> listeFilms, String Titre) {
+    for (Film film : listeFilms) {
+        if (Film.getTitre().equals(titre)) {
+            return film;
+        }
+    }
+    return null;
+    }
 }
