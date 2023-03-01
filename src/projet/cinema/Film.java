@@ -13,7 +13,7 @@ public class Film {
     private String genre;
     private LocalDate datesortie;
     private ArrayList<String> casting;
-    private String résumé;
+    private String resume;
     private float notepresse;
     private Etablissement salle;
     private final String Nom_Fichier_Utilisateur = "Utilisateurs.txt";
