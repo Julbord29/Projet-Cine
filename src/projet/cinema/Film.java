@@ -32,6 +32,13 @@ public class Film {
         this.salle = salle;
     }
     
+    
+    @Override
+    public String toString() {
+        return "Identifiant: "+ identifiant +" | titre: "+ titre +" | genre:  "+ genre +" | Durée: " + duree +
+           " | Date de Sortie:" + datesortie + " | Casting: "+ casting + " |Résumé: "+ resume + " |Note de Presse: " + notepresse +
+           " | Salle :" + salle;
+    }
 
         
     public Portail(String nom){
