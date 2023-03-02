@@ -55,7 +55,7 @@ public class Etablissement {
         List<Etablissement> resultat = new ArrayList<>();
         for (Etablissement etablissement : etablissements) {
             if (Etablissement.getNom().contains(searchTerm) ||
-                Etablissement.getFilm().contains(searchTerm)) {
+                Etablissement.getVille().contains(searchTerm)) {
                 resultat.add(etablissement);
             }
         }

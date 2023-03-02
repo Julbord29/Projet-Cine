@@ -93,7 +93,10 @@ public class Film {
 }
 */
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.String.valueOf;
 import java.time.LocalDate;
@@ -210,7 +213,23 @@ public class Film {
     }
 
     
-    
+    public static Film chercherFilmParTitre(String cheminFichier, String titre) throws IOException {
+    BufferedReader br = new BufferedReader(new FileReader(cheminFichier));
+    String ligne;
+    while ((ligne = br.readLine()) != null) {
+        String[] attributs = ligne.split(",");
+        if (attributs[0].equals(titre)) {
+            String realisateur = attributs[1];
+            int annee = Integer.parseInt(attributs[2]);
+            String genre = attributs[3];
+            Film film = new Film(titre, realisateur, annee, genre);
+            br.close();
+            return film;
+        }
+    }
+    br.close();
+    return null;
+}
 }
    
 
