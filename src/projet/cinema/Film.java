@@ -1,5 +1,6 @@
 package projet.cinema;
 
+/*
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -43,6 +44,7 @@ public class Film {
         
     public Portail(String nom){
         portail = nom;
+        
         
     }
     
@@ -89,3 +91,85 @@ public class Film {
     return null;
     }
 }
+*/
+
+import java.io.File;
+import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Film {
+    
+    private int duree;
+    private String identifiant;
+    private String titre;
+    private String realisateur;
+    private String genre;
+    private String datesortie;
+    private ArrayList<String> casting;
+    private String resume;
+    private float notepresse;
+    private Etablissement salle;
+
+    public  Film(String titre, String realisateur, String genre, String identifiant, int duree, String datesortie, ArrayList<String> casting, String resume, float notepresse, Etablissement salle) {
+        
+        this.duree = duree;
+        this.identifiant = identifiant;
+        this.titre = titre;
+        this.realisateur = realisateur;
+        this.genre = genre;
+        this.datesortie = datesortie;
+        this.casting = casting;
+        this.resume = resume;
+        this.notepresse = notepresse;
+        this.salle = salle;
+    }
+    
+   
+    public String getIdentifiant() {
+        return identifiant;
+    }
+    
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+    
+    public String getRealisateur(){
+        return realisateur;
+    }
+
+    
+    public int getDuree(){
+        return duree;
+    }
+    
+    public String getDateSortie(){
+        return datesortie;
+    }
+    
+    public ArrayList<String> getCasting(){
+        return casting;
+    }
+    
+    public String getResume(){
+        return resume;
+    }
+    
+    public float getNotePresse(){
+        return notepresse;
+    }
+    
+    public Etablissement Getsalle(){
+        return salle;
+    }
+    
+    
+}
+   
+
+    

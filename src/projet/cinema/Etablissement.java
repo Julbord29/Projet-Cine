@@ -36,6 +36,7 @@ public class Etablissement {
         return film;
     }
     
+    
     public static String getVille() {
         return Ville;
     }
