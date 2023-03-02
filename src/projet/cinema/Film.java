@@ -117,24 +117,29 @@ public class Film {
     private double notepresse;
     private String salle;
 
- public Film(String identifiant, String titre, String realisateur, LocalDate datesortie, String genre, String salle, String resume, double notepresse, List<String> casting, int duree) {
-    this.identifiant = identifiant;
-    this.titre = titre;
-    this.realisateur = realisateur;
-    this.genre = genre;
-    this.datesortie = datesortie;
-    this.casting = casting;
-    this.resume = resume;
-    this.notepresse = notepresse;
-    this.salle = salle;
-    this.duree = duree;
-}
+    public Film(String identifiant, String titre, String realisateur, LocalDate datesortie, String genre, String salle, String resume, double notepresse, List<String> casting, int duree) {
+        this.identifiant = identifiant;
+        this.titre = titre;
+        this.realisateur = realisateur;
+        this.genre = genre;
+        this.datesortie = datesortie;
+        this.casting = casting;
+        this.resume = resume;
+        this.notepresse = notepresse;
+        this.salle = salle;
+        this.duree = duree;
+    }
+
+    //Ce constructeur a été créé pour résoudre une erreur de types dans la méthode RechercheFilmParnom
+    private Film(String titre, String realisateur, int annee, String genre) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+     }
     
    
     public String getIdentifiant() {
         return identifiant;
     }
-    
+
     public String getTitre() {
         return titre;
     }
@@ -142,7 +147,7 @@ public class Film {
     public String getGenre() {
         return genre;
     }
-    
+
     public String getRealisateur(){
         return realisateur;
     }
@@ -150,28 +155,28 @@ public class Film {
     public int getDuree(){
         return duree;
     }
-    
+
     public LocalDate getDateSortie(){
         return datesortie;
     }
-    
+
     public List<String> getCasting(){
         return casting;
     }
-    
+
     public String getResume(){
         return resume;
     }
-    
+
     public double getNotePresse(){
         return notepresse;
     }
-    
+
     public String Getsalle(){
         return salle;
     }
-    
-    
+
+
     public static void ajouterFilm(List<Film> films) {
         Scanner sc = new Scanner(System.in);
 
@@ -212,24 +217,24 @@ public class Film {
         films.add(new Film(identifiant, titre, realisateur, dateSortie, genre, salle, resume, notePresse, casting, duree));
     }
 
-    
+
     public static Film chercherFilmParTitre(String cheminFichier, String titre) throws IOException {
-    BufferedReader br = new BufferedReader(new FileReader(cheminFichier));
-    String ligne;
-    while ((ligne = br.readLine()) != null) {
-        String[] attributs = ligne.split(",");
-        if (attributs[0].equals(titre)) {
-            String realisateur = attributs[1];
-            int annee = Integer.parseInt(attributs[2]);
-            String genre = attributs[3];
-            Film film = new Film(titre, realisateur, annee, genre);
-            br.close();
-            return film;
+        BufferedReader br = new BufferedReader(new FileReader(cheminFichier));
+        String ligne;
+        while ((ligne = br.readLine()) != null) {
+            String[] attributs = ligne.split(",");
+            if (attributs[0].equals(titre)) {
+                String realisateur = attributs[1];
+                int annee = Integer.parseInt(attributs[2]);
+                String genre = attributs[3];
+                Film film = new Film(titre, realisateur, annee, genre);
+                br.close();
+                return film;
+            }
         }
+        br.close();
+        return null;
     }
-    br.close();
-    return null;
-}
 }
    
 

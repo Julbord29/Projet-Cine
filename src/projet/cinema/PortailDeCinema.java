@@ -29,9 +29,7 @@ public class PortailDeCinema {
             System.out.println("Votre recherche : " + RechercheFlm);
             System.out.println("Résultats de la recherche : ");
         }
-        
-        
-        
+       
         else if (Recherche == 2) {
             System.out.println("Quelle salle de cinéma cherchez-vous?");
             sc = new Scanner(System.in);
@@ -39,8 +37,6 @@ public class PortailDeCinema {
             System.out.println("Votre recherche : " + RechercheSalle);
             System.out.println("Résultats de la recherche : ");
         }
-        
-        
         
         else {
             // Création de la liste de films
