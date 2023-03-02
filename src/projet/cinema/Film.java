@@ -168,7 +168,7 @@ public class Film {
         return salle;
     }
     
-    /*
+    
     public static void ajouterFilm(List<Film> films) {
         Scanner sc = new Scanner(System.in);
 
@@ -208,7 +208,7 @@ public class Film {
         }
         films.add(new Film(identifiant, titre, realisateur, dateSortie, genre, salle, resume, notePresse, casting, duree));
     }
-*/
+
     
     
 }
