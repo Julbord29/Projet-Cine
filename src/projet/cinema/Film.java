@@ -107,25 +107,24 @@ public class Film {
     private String titre;
     private String realisateur;
     private String genre;
-    private String datesortie;
-    private ArrayList<String> casting;
+    private LocalDate datesortie;
+    private List<String> casting;
     private String resume;
-    private float notepresse;
+    private double notepresse;
     private String salle;
 
-    public  Film(String titre, String realisateur, String genre, String identifiant, int duree, String datesortie, ArrayList<String> casting, String resume, float notepresse, String salle) {
-        
-        this.duree = duree;
-        this.identifiant = identifiant;
-        this.titre = titre;
-        this.realisateur = realisateur;
-        this.genre = genre;
-        this.datesortie = datesortie;
-        this.casting = casting;
-        this.resume = resume;
-        this.notepresse = notepresse;
-        this.salle = salle;
-    }
+ public Film(String identifiant, String titre, String realisateur, LocalDate datesortie, String genre, String salle, String resume, double notepresse, List<String> casting, int duree) {
+    this.identifiant = identifiant;
+    this.titre = titre;
+    this.realisateur = realisateur;
+    this.genre = genre;
+    this.datesortie = datesortie;
+    this.casting = casting;
+    this.resume = resume;
+    this.notepresse = notepresse;
+    this.salle = salle;
+    this.duree = duree;
+}
     
    
     public String getIdentifiant() {
@@ -144,16 +143,15 @@ public class Film {
         return realisateur;
     }
 
-    
     public int getDuree(){
         return duree;
     }
     
-    public String getDateSortie(){
+    public LocalDate getDateSortie(){
         return datesortie;
     }
     
-    public ArrayList<String> getCasting(){
+    public List<String> getCasting(){
         return casting;
     }
     
@@ -161,7 +159,7 @@ public class Film {
         return resume;
     }
     
-    public float getNotePresse(){
+    public double getNotePresse(){
         return notepresse;
     }
     
