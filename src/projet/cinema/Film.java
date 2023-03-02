@@ -99,6 +99,7 @@ import static java.lang.String.valueOf;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Film {
     
@@ -166,6 +167,48 @@ public class Film {
     public String Getsalle(){
         return salle;
     }
+    
+    /*
+    public static void ajouterFilm(List<Film> films) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Identifiant : ");
+        String identifiant = sc.nextLine();
+
+        System.out.print("Titre : ");
+        String titre = sc.nextLine();
+
+        System.out.print("Réalisateur : ");
+        String realisateur = sc.nextLine();
+
+        System.out.print("Date de sortie (yyyy-mm-dd) : ");
+        LocalDate dateSortie = LocalDate.parse(sc.nextLine());
+
+        System.out.print("Genre : ");
+        String genre = sc.nextLine();
+
+        System.out.print("Salle : ");
+        String salle = sc.nextLine();
+
+        System.out.print("Résumé : ");
+        String resume = sc.nextLine();
+
+        System.out.print("Note de presse : ");
+        float notePresse = Float.parseFloat(sc.nextLine());
+
+        System.out.print("Durée : ");
+        int duree = Integer.parseInt(sc.nextLine());
+
+        List<String> casting = new ArrayList<>();
+        System.out.println("Saisissez le casting (terminer avec une ligne vide) : ");
+        String acteur = sc.nextLine();
+        while (!acteur.isEmpty()) {
+            casting.add(acteur);
+            acteur = sc.nextLine();
+        }
+        films.add(new Film(identifiant, titre, realisateur, dateSortie, genre, salle, resume, notePresse, casting, duree));
+    }
+*/
     
     
 }

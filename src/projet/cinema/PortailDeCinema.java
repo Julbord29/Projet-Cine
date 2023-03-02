@@ -5,7 +5,6 @@ Projet Portail de Cinema
 BORDIER Julien et ANSALDI Enzo
 */
 /*
-import java.util.Scanner;
 
 
 public class PortailDeCinema {
@@ -44,6 +43,7 @@ import java.time.LocalDate;
 public class PortailDeCinema{
     public static void main(String[] args) {
         // Création de la liste de films
+        
         List<Film> films = new ArrayList<>();
         
         List<String> casting1 = new ArrayList<>();
@@ -60,7 +60,8 @@ public class PortailDeCinema{
         casting3.add("Casting 5");
         casting3.add("Casting 6");
         films.add(new Film("003", "The Dark Knight", "Christopher Nolan", LocalDate.of(2008, 02, 05), "Action", "Paris", "Le film parle de rien du tout", 4.5, casting3, 90));
-
+        
+        
         // Écriture de la liste de films dans un fichier texte
         File file = new File("films.txt");
         try {
