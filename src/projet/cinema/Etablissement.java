@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  *
- * @author julie
+ * @author julien
+ * é
  */
 public class Etablissement {
     private static String nom;
@@ -17,6 +18,7 @@ public class Etablissement {
     private float tarifs;
     private float note;
     private static Film film;
+    private static String Ville;
 
     public Etablissement(String nom, String identifiant, ArrayList<String> filmsProjetes, ArrayList<String> seances, String ville, int nbplaces, float tarifs, float note) {
         this.nom = nom;
@@ -34,9 +36,13 @@ public class Etablissement {
         return film;
     }
     
-    public Etablissement chercherEtablissementParNom(List<Etablissement> listeEtablissement, String nom) {
+    public static String getVille() {
+        return Ville;
+    }
+    
+    public Etablissement chercherEtablissementParVille(List<Etablissement> listeEtablissement, String nom) {
     for (Etablissement etablissement : listeEtablissement) {
-        if (Etablissement.getNom().equals(nom)) {
+        if (Etablissement.getVille().equals(Ville)) {
             return etablissement;
         }
     }
