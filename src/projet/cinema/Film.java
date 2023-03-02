@@ -95,6 +95,7 @@ public class Film {
 
 import java.io.File;
 import java.io.PrintWriter;
+import static java.lang.String.valueOf;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -110,9 +111,9 @@ public class Film {
     private ArrayList<String> casting;
     private String resume;
     private float notepresse;
-    private Etablissement salle;
+    private String salle;
 
-    public  Film(String titre, String realisateur, String genre, String identifiant, int duree, String datesortie, ArrayList<String> casting, String resume, float notepresse, Etablissement salle) {
+    public  Film(String titre, String realisateur, String genre, String identifiant, int duree, String datesortie, ArrayList<String> casting, String resume, float notepresse, String salle) {
         
         this.duree = duree;
         this.identifiant = identifiant;
@@ -164,7 +165,7 @@ public class Film {
         return notepresse;
     }
     
-    public Etablissement Getsalle(){
+    public String Getsalle(){
         return salle;
     }
     
