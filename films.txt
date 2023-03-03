@@ -1,3 +1,1 @@
-001,The Shawshank Redemption,Frank Darabont,2022-02-11,Drama,Nice,Le film parle de rien,4.5,[Casting 1, Casting 2],135
-002,The Godfather,Francis Ford Coppola,1972-03-12,Crime,Marseille,Le film parle de tout,3.6,[Casting 3, Casting 4],132
-003,The Dark Knight,Christopher Nolan,2008-02-05,Action,Paris,Le film parle de rien du tout,4.5,[Casting 5, Casting 6],90
+003,Avatar2,James Cameron,2022-12-14,Science-Fiction,Paris,Ce film par le mecs en bleu qui prot�gent une plan�te des envahisseurs humains.,4.099999904632568,[Sam Worthington, Zoe Saldana, Sigourney Weaver],192

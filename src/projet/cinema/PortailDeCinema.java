@@ -18,7 +18,7 @@ public class PortailDeCinema {
         Scanner sc = new Scanner(System.in);
         System.out.println("Bienvenue ! Que voulez-vous faire? ");
         System.out.println("Rechercher un Film (1) ");
-        System.out.println("Rechercher une Salle (2) ");
+        System.out.println("Rechercher une Salle de cinéma(2) ");
         System.out.println("Ajouter un film (réservé à l'admin) (3)");
         int Recherche = sc.nextInt();
         
@@ -31,7 +31,7 @@ public class PortailDeCinema {
         }
        
         else if (Recherche == 2) {
-            System.out.println("Quelle salle de cinéma cherchez-vous?");
+            System.out.println("Quelle salle de cinéma recherchez-vous?");
             sc = new Scanner(System.in);
             String RechercheSalle = sc.nextLine();
             System.out.println("Votre recherche : " + RechercheSalle);
@@ -42,8 +42,9 @@ public class PortailDeCinema {
             // Création de la liste de films
 
             List<Film> films = new ArrayList<>();
+            Film.ajouterFilm(films);
 
-            List<String> casting1 = new ArrayList<>();
+            /*List<String> casting1 = new ArrayList<>();
             casting1.add("Casting 1");
             casting1.add("Casting 2");
             films.add(new Film("001", "The Shawshank Redemption", "Frank Darabont", LocalDate.of(2022, 02, 11), "Drama", "Nice", "Le film parle de rien", 4.5, casting1, 135));
@@ -57,7 +58,7 @@ public class PortailDeCinema {
             casting3.add("Casting 5");
             casting3.add("Casting 6");
             films.add(new Film("003", "The Dark Knight", "Christopher Nolan", LocalDate.of(2008, 02, 05), "Action", "Paris", "Le film parle de rien du tout", 4.5, casting3, 90));
-
+            */
 
 
             // Écriture de la liste de films dans un fichier texte
