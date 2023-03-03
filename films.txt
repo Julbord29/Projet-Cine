@@ -1,1 +1,1 @@
-003,Avatar2,James Cameron,2022-12-14,Science-Fiction,Paris,Ce film par le mecs en bleu qui prot�gent une plan�te des envahisseurs humains.,4.099999904632568,[Sam Worthington, Zoe Saldana, Sigourney Weaver],192
+003,Avatar,James Cameron,2022-12-14,Fiction,Paris,Rien,4.5,[Moi, Toi, Lui],192

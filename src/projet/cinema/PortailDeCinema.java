@@ -41,8 +41,16 @@ public class PortailDeCinema {
         else {
             // Création de la liste de films
 
-            List<Film> films = new ArrayList<>();
-            Film.ajouterFilm(films);
+            
+            List<Film> films = null;
+            if (films == null){
+                films =  new ArrayList<>();
+                Film.ajouterFilm(films);
+            }
+            else{
+            
+                Film.ajouterFilm(films);
+            }
 
             /*List<String> casting1 = new ArrayList<>();
             casting1.add("Casting 1");
