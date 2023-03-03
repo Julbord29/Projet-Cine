@@ -78,7 +78,8 @@ public class PortailDeCinema {
                 }
                 fich.close();
                 System.out.println("La liste de films a été enregistrée dans le fichier " + file.getName());
-            } catch (Exception e) {
+            } 
+            catch (Exception e) {
                 System.out.println("Erreur : " + e.getMessage());
             }
         }
