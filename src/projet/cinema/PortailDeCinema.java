@@ -47,7 +47,7 @@ public class PortailDeCinema {
             String login = rep[0];
             String motDePasse = rep[1];
             
-            if (login.equals("Admin94")&& motDePasse.equals("12345")){
+            if (login.equals(Administrateur.idAdmin)&& motDePasse.equals("12345")){
             
                 
                 String cheminFichier = "films.txt";
@@ -75,6 +75,12 @@ public class PortailDeCinema {
                 catch (Exception e) {
                     System.out.println("Erreur : " + e.getMessage());
                 }   
+            }
+            
+            else {
+               System.out.println("Identifiant admin incorrect ! ");
+               System.out.println("Recommencer (1)");
+               System.out.println("Retourner au Menu Principal (2)");
             }
         }
             
