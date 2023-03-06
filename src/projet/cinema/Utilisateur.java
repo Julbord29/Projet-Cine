@@ -1,6 +1,7 @@
 package projet.cinema;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 
 public class Utilisateur {
@@ -16,4 +17,16 @@ public class Utilisateur {
         this.identifiant = identifiant;
     }
     
+    public static String[] connexion(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Saisissez votre ID : ");
+        String login = sc.nextLine();
+
+        System.out.println("Saisissez votre Mot de Passe :");
+        String motDePasse = sc.nextLine();
+
+        return new String[]{login, motDePasse};
 }
+        
+}
+

@@ -1,1 +1,1 @@
-004,Moi,Moi,2022-11-15,sgngs,ldfhkjld,hdlkjhdr,4.5,[Moi, Lui],123
+001,Avatar,John,2022-12-14,Fiction,Paris,kljzdkljczlkj,4.0,[moi, toi, lui],234

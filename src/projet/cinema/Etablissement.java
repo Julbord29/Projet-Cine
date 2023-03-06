@@ -3,11 +3,6 @@ package projet.cinema;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author julien
- * é
- */
 public class Etablissement {
     private static String nom;
     private String identifiant;

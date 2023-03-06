@@ -1,6 +1,7 @@
 package projet.cinema;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 
 public class Administrateur extends Utilisateur {
@@ -10,4 +11,7 @@ public class Administrateur extends Utilisateur {
         super(login, motDePasse, dateNaissance, identifiant);
         this.idAdmin = idAdmin;
     }
+    
 }
+    
+
